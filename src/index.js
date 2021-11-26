@@ -17,7 +17,7 @@ app.use(express.static(publicDirectoryPath))
 
 // Listen for new connections to Socket.io
 io.on('connection', (socket) => {
-    console.log('New Websocket connection')
+    //console.log('New Websocket connection')
 
     socket.on('join', (options, callback) => {
         const { error, user } = addUser({ id: socket.id, ...options })
